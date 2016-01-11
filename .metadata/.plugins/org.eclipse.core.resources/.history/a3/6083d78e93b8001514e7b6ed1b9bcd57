@@ -1,0 +1,20 @@
+
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random Img</title>
+</head>
+<body>	
+<div id="container"></div>
+<p>Your car will be:</p>
+<script>
+var images = 5;
+var firstPart = '<img src="images/car';
+var lastPart = '.jpg" height="200" width="300">';	
+var r = Math.ceil(Math.random() * images);
+var box = document.getElementById('container');
+box.innerHTML = firstPart + r + lastPart;	 	
+</script>
+
+</body>
+</html>

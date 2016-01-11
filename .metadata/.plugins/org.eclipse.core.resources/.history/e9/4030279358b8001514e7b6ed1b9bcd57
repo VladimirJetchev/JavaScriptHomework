@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Task One</title>
+</head>
+<body>	
+<p id ="result_notice">The most common element in the array [3, 'a','a','a', 2, 3, ,'a', 3, 'a', 2, 4, 9, ] is: 
+</p>
+<p id="result">test</p>
+
+<script type= "text/JavaScript"> 
+/***************************************************************************
+Задача 1: 
+
+Напишете JavaScript програма, която по даден array да показва най-
+често срещания символ.
+var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
+Резултат: a ( 5 times ) 
+****************************************************************************
+*/
+
+//Define
+var arr= [3, 'a','a','a', 2, 3, ,'a', 3, 'a', 2, 4, 9, ]; 
+
+var i;
+var j;
+var counter = 0; 
+var element;
+
+//Loop through arr
+for ( i=0 ; i<arr.length; i++ ){
+	var counterInloop=1;
+	for (j= i+1 ; j <arr.length-1; j++){
+		if ( arr[i] == arr[j]){
+			counterInloop++; 
+			var elementInloop = arr[i];
+		}
+	}if ( counterInloop > counter ){
+		element = elementInloop
+		counter = counterInloop
+	}
+}
+
+
+//Output:
+var result= document.getElementById("result");
+result.innerHTML=element+" ("+counter +" times)";
+
+</script>
+</html>

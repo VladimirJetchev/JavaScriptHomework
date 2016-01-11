@@ -1,0 +1,19 @@
+form {
+	float left;
+  text align: center;
+  padding: 0 10px 10px 10px;
+  background: lime;
+  border: 2px solid blue;
+}
+
+form div {
+  margin: 10px;
+}
+
+form div span {
+  color: red;
+  float: right;
+}
+form input, select {
+  float: right;
+}

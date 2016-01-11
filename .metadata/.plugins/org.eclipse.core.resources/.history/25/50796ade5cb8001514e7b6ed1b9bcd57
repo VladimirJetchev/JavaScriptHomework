@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Links</title>
+</head>
+<body>
+	<div>
+		<p class="Link">Links of page</p>
+		<div>
+			<a href="http://www.imdb.com/" >My favorite site</a>
+		</div>
+		<div>
+			<a href="http://olx.bg/" >My favorite shop</a>
+		</div>
+		<div>
+			<a href="https://bg.wikipedia.org/wiki/%D0%A1%D1%82%D1%80%D0%B0%D0%B9%D0%BA%D0%B1%D0%BE%D0%BB" >My hobby</a>
+		</div>
+	</div>
+	
+	<p> there are </p>
+	<script>
+	there are
+		document.write(document.getElementsByTagName('a').length);
+	links inside the page
+	</script>
+	 <p>links in this document</p>
+</body>
+</html>

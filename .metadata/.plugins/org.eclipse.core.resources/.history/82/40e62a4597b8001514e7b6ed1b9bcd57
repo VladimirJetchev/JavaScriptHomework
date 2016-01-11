@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Addition of Rows</title>
+</head>
+<body>
+<table border='1'>
+    <tr><td>row 1</td></tr>
+    <tr><td>row 2</td></tr>
+    <tr><td>row 3</td></tr>
+    <tr><td>row 4</td></tr>
+    <tr><td>row 5</td></tr>
+</table>
+<button id="addRow">Add Rows</button>
+<script>
+var row = document.querySelector('body table tr');
+var cln = row.cloneNode(true);
+document.getElementsByTagName('table')[0].appendChild(cln);    
+
+var button = document.getElementById('addRow');
+button.addEventListener('click', addRows, false);
+</script>
+</body>
+</html>

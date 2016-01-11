@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Validate Form</title>
+    <link rel="stylesheet" type="text/css" href="Task10JS.css">
+</head>
+
+<body>
+    <form id="wrapper" >
+        <div>
+            <label>First name:</label>
+            <input type="text" name="name" class="registerInput">
+            <span class="error">Required field!</span>
+        </div>
+        <div>
+            <label>Family Name:</label>
+            <input type="text" name="fname" class="registerInput">
+            <span class="error">Required field!</span>
+        </div>
+        <div>
+            <label>Town:</label>
+            <input type="text" name="town" class="registerInput">
+            <span class="error">Required field!</span>
+        </div>
+        <div>
+            <label>Adress:</label>
+            <input type="text" name="adress" class="registerInput">
+            <span class="error">Required field!</span>
+        </div>
+        <div>
+            <label>From</label>
+            <select id="selectCountry">
+                <option value="Bulgaria">Bulgaria</option>
+                <option value="USA">USA</option>
+                <option value="Serbia">Serbia</option>
+                <option value="Germani">Germany</option>
+                <option value="Greece">Greece</option>
+                 <option value="Onther">Other</option>
+            </select>
+        </div>
+        <div id="otherSelect" style="display: none;">
+            <label>Other Country</label>
+            <input type="text" class="registerInput">
+            <span class="error">Required field!</span>
+        </div>
+        <div>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+<!--Help for this from internet -->
+<script>
+window.onload = function() {
+	  var allInputs = document.getElementsByClassName("registerInput");
+	  var allErrorLabels = document.getElementsByClassName("error");
+	  for (var i = 0; i < allErrorLabels.length; i++) {
+	    allErrorLabels[i].style.visibility = 'hidden';
+	  }
+
+
+	  var mainForm = document.getElementById("wrapper");
+	  var element = document.getElementById("wrapper");
+	  element.addEventListener("submit", function(event) {
+
+	  for (var i = 0; i < allInputs.length; i++) {
+	    if (allInputs[i].value == "") {   
+	        event.preventDefault();
+	        changeColor(allInputs[i]);          
+	        }
+	    }
+	  });
+	  var changeColor = function(input) {
+	    input.style.background = "red";
+	    input.nextSibling.nextSibling.style.visibility = 'visible';
+	    input.onchange = function(){
+	      this.style.background = "white"
+	      this.nextSibling.nextSibling.style.visibility = 'hidden';
+	    }
+	  }  
+	}
+</script>
+</html>

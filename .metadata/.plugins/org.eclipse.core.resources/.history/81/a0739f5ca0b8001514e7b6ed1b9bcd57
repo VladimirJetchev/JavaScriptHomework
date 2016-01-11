@@ -1,0 +1,24 @@
+
+body{
+	background: grey;
+}
+.p{
+	color: red;
+}
+form {
+	float: left;
+ 
+  background: lime;
+}
+
+form div {
+  margin: 10px;
+}
+
+form div span {
+  color: red;
+  float: right;
+}
+form input, select {
+  float: right;
+}

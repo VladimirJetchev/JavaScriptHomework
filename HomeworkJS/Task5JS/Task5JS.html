@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calculating volume</title>
+</head>
+
+<body>
+    <div>
+        <label for="insert">Radius of the sphere:</label>
+    </div>
+    <div>
+        <input type="text" name="insert">
+    </div>
+    <div>
+        <label for="insert">Volume of the sphere:</label>
+    </div>
+    <div>
+        <input type="text" name="result">
+    </div>
+    <div style="margin-top: 5px;">
+        <button id="calculate" type="submit">Calculate</button>
+    </div>
+    <script>
+
+    function calculateRadius(radius) {
+        return Math.PI * ((radius) * (radius) * (radius)) * (4 / 3);
+    }
+
+    function getResult(){
+    	var input = Number(document.getElementsByName('insert')[0].value)
+    	var output = Math.round(calculateRadius(input));
+    	var box = document.getElementsByName('result')[0];
+    	box.value = output;
+    }
+
+    var button = document.getElementById('calculate');
+    button.addEventListener('click', getResult, false);
+    
+    </script>
+</body>
+
+</html>

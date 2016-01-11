@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <title>Addition of Rows</title>
+</head>
+<body>
+<h1>Make the infinity table!</h1>
+<table border='1'>
+    <tr><td>row 1</td></tr>
+    <tr><td>row 2</td></tr>
+    <tr><td>row 3</td></tr>
+    <tr><td>row 4</td></tr>
+    <tr><td>row 5</td></tr>
+</table>
+<button id="addRow">Add Row</button>
+<!-- This can be moved to a .js document -->
+<script>
+function addRows() {
+var row = document.querySelector('body table tr');
+var cln = row.cloneNode(true);
+document.getElementsByTagName('table')[0].appendChild(cln);    
+}
+var button = document.getElementById('addRow');
+button.addEventListener('click', addRows, false);
+</script>
+</body>
+</html>
